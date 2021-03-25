@@ -19,6 +19,13 @@ defmodule EventsSpaWeb.Router do
     get "/", PageController, :index
   end
 
+  scope "/api/v1", EventsSpaWeb do
+    pipe_through :api
+
+    resources "/users", UserController, except: [:new, :edit]
+    resources "/events", EventController, except: [:new, :edit]
+    resources "/comments", CommentController, except: [:new, :edit]
+  end
   # Other scopes may use custom stacks.
   # scope "/api", EventsSpaWeb do
   #   pipe_through :api

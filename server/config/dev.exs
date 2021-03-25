@@ -2,11 +2,11 @@ use Mix.Config
 
 # Configure your database
 config :events_spa, EventsSpa.Repo,
-  username: "postgres",
-  password: "postgres",
+  username: "events_spa",
+  password: "homework9",
   database: "events_spa_dev",
   hostname: "localhost",
-  show_sensitive_data_on_connection_error: true,
+  #show_sensitive_data_on_connection_error: true,
   pool_size: 10
 
 # For development, we disable any cache and enable
